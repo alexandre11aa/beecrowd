@@ -16,7 +16,8 @@ INSERT
         (3,	'Towel holder'     , 10000, 5.50),
         (4,	'Computer desk'    , 350  , 100),
         (5,	'Chair'            , 3000 , 210.64),
-        (6,	'Single bed'       , 750  , 99);
+        (6,	'Single bed'       , 750  , 99)
+    ON CONFLICT (id) DO NOTHING;
 
 -- Consulta (BEE 2604)
 

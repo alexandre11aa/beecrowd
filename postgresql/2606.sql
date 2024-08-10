@@ -26,7 +26,8 @@ INSERT
         (7, 'superior'),
         (8, 'wood'),
         (9, 'super luxury'),
-        (10, 'vintage');
+        (10, 'vintage')
+    ON CONFLICT (id) DO NOTHING;
 
 INSERT 
     INTO products (id, name, amount, price, id_categories) VALUES
@@ -35,7 +36,8 @@ INSERT
         (3, 'Notebook desk'     , 10000, 25.50 , 9),
         (4, 'Computer desk'     , 350  , 320.50, 6),
         (5, 'Chair'             , 3000 , 210.64, 9),
-        (6, 'Home alarm'        , 750  , 460   , 4);
+        (6, 'Home alarm'        , 750  , 460   , 4)
+    ON CONFLICT (id) DO NOTHING;
 
 -- Consulta (BEE 2606)
 

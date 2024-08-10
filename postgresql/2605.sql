@@ -35,7 +35,8 @@ INSERT
         (7, 'superior'),
         (8, 'wood'),
         (9, 'super luxury'),
-        (10, 'vintage');
+        (10, 'vintage')
+    ON CONFLICT (id) DO NOTHING;
 
 INSERT 
     INTO providers (id, name, street, city, state) VALUES
@@ -44,7 +45,8 @@ INSERT
         (3, 'Caroline Silva'  , 'Av São Paulo'  , 'Salvador'      , 'BA'),
         (4, 'Guilerme Staff'  , 'Rua Central'   , 'Porto Alegre'  , 'RS'),
         (5, 'Isabela Moraes'  , 'Av Juiz Grande', 'Curitiba'      , 'PR'),
-        (6, 'Francisco Accerr', 'Av Paulista'   , 'São Paulo'     , 'SP');
+        (6, 'Francisco Accerr', 'Av Paulista'   , 'São Paulo'     , 'SP')
+    ON CONFLICT (id) DO NOTHING;
 
 INSERT 
     INTO products (id, name, amount, price, id_providers, id_categories) VALUES
@@ -53,7 +55,8 @@ INSERT
         (3, 'Towel holder'     , 10000, 25.50 , 5, 1),
         (4, 'Computer desk'    , 350  , 320.50, 4, 6),
         (5, 'Chair'            , 3000 , 210.64, 3, 6),
-        (6, 'Single bed'       , 750  , 460   , 1, 2);
+        (6, 'Single bed'       , 750  , 460   , 1, 2)
+    ON CONFLICT (id) DO NOTHING;
 
 -- Consulta (BEE 2605)
 
