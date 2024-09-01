@@ -1,3 +1,5 @@
+-- OBS: O ARQUIVO NÃO SE TRATA DE UMA QUESTÃO DO BEECROWD, MAS SIM UM PARA LIMPAR TODAS AS TABELAS DO BANCO DE DADOS
+
 -- psql -h localhost -p 5432 -U postgres -d estrela -f 0000.sql
 
 -- psql: Cliente de linha de comando do PostgreSQL para executar comandos e scripts SQL.
