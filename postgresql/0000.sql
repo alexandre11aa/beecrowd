@@ -6,8 +6,8 @@
 -- -h localhost: Especifica o host do servidor PostgreSQL. localhost indica que o servidor está na mesma máquina.
 -- -p 5432: Define a porta onde o servidor PostgreSQL está ouvindo. 5432 é a porta padrão.
 -- -U postgres: Nome do usuário para se conectar ao banco de dados. postgres é o superusuário padrão do PostgreSQL.
--- -d 0000: Nome do banco de dados ao qual você está se conectando. estrela é o banco de dados onde o script será executado.
--- -f restart.sql: Especifica o arquivo de script SQL que você deseja executar. restart.sql é o arquivo contendo os comandos SQL.
+-- -d estrela: Nome do banco de dados ao qual você está se conectando. estrela é o banco de dados onde o script será executado.
+-- -f 0000.sql: Especifica o arquivo de script SQL que você deseja executar. 0000.sql é o arquivo contendo os comandos SQL.
 
 -- psql -h localhost -p 5432 -U alexandre11aa -d estrela -f 2602.sql
 
