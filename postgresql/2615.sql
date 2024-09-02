@@ -19,7 +19,7 @@ INSERT
         (6, 'Diogo Melo Dias'            , 'Rua Duzentos e Cinqüenta'      , 'Várzea Grande')
     ON CONFLICT (id) DO NOTHING;
 
--- Consulta (BEE 2614)
+-- Consulta (BEE 2615)
 
 SELECT 
     DISTINCT c.city
