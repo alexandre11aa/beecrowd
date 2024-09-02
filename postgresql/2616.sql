@@ -7,9 +7,9 @@ CREATE TABLE IF NOT EXISTS customers (
     city varchar
 );
 
-CREATE TABLE IF NOT EXISTS rentals (
+CREATE TABLE IF NOT EXISTS locations (
     id numeric PRIMARY KEY,
-    rentals_date DATE,
+    locations_date DATE,
     id_customers numeric
 );
 
@@ -26,12 +26,12 @@ INSERT
     ON CONFLICT (id) DO NOTHING;
 
 INSERT 
-    INTO rentals (id, rentals_date, id_customers) VALUES
-        (1, '2016-09-10', 3),
-        (2, '2016-02-09', 1),
-        (3, '2016-02-08', 4),
-        (4, '2016-02-09', 2),
-        (5, '2016-02-03', 6),
+    INTO locations (id, locations_date, id_customers) VALUES
+        (1, '2016-10-09', 3),
+        (2, '2016-09-02', 1),
+        (3, '2016-08-02', 4),
+        (4, '2016-09-02', 2),
+        (5, '2016-03-02', 6),
         (6, '2016-04-04', 4)
     ON CONFLICT (id) DO NOTHING;
 
@@ -39,11 +39,10 @@ INSERT
 
 SELECT 
     c.name,
-    r.rentals_date
+    l.locations_date
 FROM 
     customers c
-JOIN 
-    rentals r ON r.id_customers = c.id
+LEFT JOIN 
+    locations l ON l.id_customers = c.id
 WHERE
-    EXTRACT(YEAR FROM r.rentals_date) = 2016 AND 
-    EXTRACT(MONTH FROM r.rentals_date) = 9;
+    l.id_customers IS NULL;
