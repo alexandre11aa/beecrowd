@@ -35,7 +35,7 @@ INSERT
         (6, '2016-04-04', 4)
     ON CONFLICT (id) DO NOTHING;
 
--- Consulta (BEE 2614)
+-- Consulta (BEE 2616)
 
 SELECT 
     c.name,
