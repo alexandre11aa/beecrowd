@@ -2,7 +2,7 @@
 
 Questões Resolvidas do Beecrowd (URI).
 
-Os problemas postados geralmente estão classificadas nas áreas "Iniciante", "Strings" e "Matemática" do Beecrowd.
+Os problemas postados geralmente estão classificadas nas áreas "Iniciante", "Strings" e "SQL" do Beecrowd.
 
 Cada código se trata de uma questão diferente.
 
