@@ -1,0 +1,13 @@
+## Leia 2 valores de ponto flutuante de dupla precisão A e B, que correspondem a 2 notas de um aluno. A seguir, calcule a média doa
+## luno, sabendo que a nota A tem peso 3.5 e a nota B tem peso 7.5 (A soma dos pesos portanto é 11). Assuma que cada nota pode ir d
+## e 0 até 10.0, sempre com uma casa decimal. O arquivo de entrada contém 2 valores com uma casa decimal cada um. Imprima a mensage
+## m "MEDIA" e a média do aluno conforme exemplo abaixo, com 5 dígitos após o ponto decimal e com um espaço em branco antes e depoi
+## s da igualdade. Utilize variáveis de dupla precisão (double) e como todos os problemas, não esqueça de imprimir o fim de linha a
+## pós o resultado, caso contrário, você receberá "Presentation Error". Q:1005
+
+D = float(input())
+E = float(input())
+
+F = ((D*3.5)+(E*7.5))/11
+
+print("MEDIA = %.5f" % F)
