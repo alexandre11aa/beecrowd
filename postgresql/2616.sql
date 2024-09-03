@@ -38,11 +38,13 @@ INSERT
 -- Consulta (BEE 2616)
 
 SELECT 
-    c.name,
-    l.locations_date
+    c.id,
+    c.name
 FROM 
     customers c
 LEFT JOIN 
     locations l ON l.id_customers = c.id
 WHERE
-    l.id_customers IS NULL;
+    l.id_customers IS NULL
+ORDER BY
+    c.id;
