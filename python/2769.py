@@ -3,26 +3,28 @@ def dijkstra(N, station, e,
              t_1, t_2,
              x_1, x_2):
 
-    ride, i = [e, 1]
+    ride, i = [[e], 1]
 
     if station == 1:
-        ride += a_1[i]
+        ride.append(a_1[0])
     else:
-        ride += a_2[i]
+        ride.append(a_2[0])
 
     while True:
 
         if station == 1:
             if a_1[i] <= a_2[i] + t_1[i-1]:
-                ride += a_1[i]
+                ride.append(a_1[i])
             else:
-                ride += a_2[i] + t_1[i-1]
+                ride.append(a_2[i])
+                ride.append(t_1[i-1])
                 station += 1
         else:
             if a_2[i] <= a_1[i] + t_2[i-1]:
-                ride += a_2[i]
+                ride.append(a_2[i])
             else:
-                ride += a_1[i] + t_2[i-1]
+                ride.append(a_1[i])
+                ride.append(t_2[i-1])
                 station -= 1
         
         i += 1
@@ -31,17 +33,15 @@ def dijkstra(N, station, e,
             break
 
     if station == 1:
-        ride += x_1
+        ride.append(x_1)
     else:
-        ride += x_2
+        ride.append(x_2)
 
     return ride
 
 def p(r_1, r_2):
-    if r_1 <= r_2:
-        print(r_1)
-    else:
-        print(r_2)
+    print(r_1, sum(r_1))
+    print(r_2, sum(r_2))
 
 p(dijkstra(3, 1, 1, [1, 2, 3], [3, 2, 1], [1, 2], [2, 1], 1, 1),
   dijkstra(3, 2, 1, [1, 2, 3], [3, 2, 1], [1, 2], [2, 1], 1, 1)) # 7
@@ -51,6 +51,9 @@ p(dijkstra(10, 1, 3, [2, 6, 5, 0, 7, 9, 4, 4, 2, 2], [8, 0, 5, 8, 5, 2, 5, 9, 1,
 
 p(dijkstra(4, 1, 8, [8, 6, 5, 4], [8, 6, 3, 8], [7, 8, 0], [8, 0, 6], 8, 2),
   dijkstra(4, 2, 1, [8, 6, 5, 4], [8, 6, 3, 8], [7, 8, 0], [8, 0, 6], 8, 2)) # 28
+
+p(dijkstra(6, 1, 6, [0, 5, 0, 8, 6, 3], [6, 9, 3, 0, 9, 8], [9, 9, 6, 5, 6], [2, 1, 3, 4, 6], 3, 5),
+  dijkstra(6, 2, 1, [0, 5, 0, 8, 6, 3], [6, 9, 3, 0, 9, 8], [9, 9, 6, 5, 6], [2, 1, 3, 4, 6], 3, 5)) # 31
 
 '''
 TIME LIMIT EXCEEDED
