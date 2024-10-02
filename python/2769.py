@@ -1,3 +1,5 @@
+# Não resolver desse modo, mas usando programação que usa um return dentro do outro
+
 def dijkstra(N, station, e, 
              a_1, a_2, 
              t_1, t_2,
